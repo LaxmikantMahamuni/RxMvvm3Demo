@@ -16,7 +16,7 @@ interface RetrofitService {
         fun getInstance(): RetrofitService {
             if (retrofitService == null) {
                 val retrofit= Retrofit.Builder()
-                    .baseUrl("https://reqres.in/")
+                    .baseUrl("https://reqres.in/") //https://www.reqres.in/ - does not work
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
                     .build()
