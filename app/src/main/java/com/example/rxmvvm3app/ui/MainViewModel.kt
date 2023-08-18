@@ -15,6 +15,7 @@ class MainViewModel(private val mainRepository: MainRepository) : ViewModel(){
     lateinit var disposable: Disposable
 
     fun getAllUsersList(){
+        /*Both line(val response & response) must be start on same column*/
         val response = mainRepository.getAllUsers()
         response.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
